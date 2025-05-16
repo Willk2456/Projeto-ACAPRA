@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .blur-border::before {
+            content: "";
+            position: absolute;
+            inset: -10px; /* cria espaço ao redor */
+            background: rgba(255, 255, 255, 0.2); /* cor da borda */
+            filter: blur(20px); /* intensidade do desfoque */
+            z-index: -1;
+            border-radius: 1rem; /* deve combinar com o do elemento principal */
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body class="bg-white">
+  <menu class="flex relative p-1 bg-white/80  backdrop-blur-md blur-border shadow-xl ">
+    <div class="ml-[10%]">
+        <img src="img\logo roxa 2.png" alt="" class="w-20 h-30"> 
+    </div>
+    <div class="text-center flex flex-col justify-center items-center ml-[7%] text-[#555484] font-extrabold font-poppins text-lg">
+        <h1>ACAPRA</h1>
+        <h1>Brusque</h1>
+    </div>
+    <div class="flex justify-between items-center space-x-16 content-between ml-[7%] font-semibold text-poppins text-lg text-[#6A0DAD]">
+        <h3>Início</h3>
+        <h3>Sobre</h3>
+        <h3>Doações</h3>
+        <h3>Adoção</h3>
+        <h3>Contato</h3>
+    </div>
+    <div class="flex flex-row items-center justify-around align-middle mr-[10%] ml-[7%] space-x-30">
+      <p><i class="fa-brands fa-instagram text-4xl text-purple-800"></i></p>
+      <p><i class="fa-brands fa-facebook text-4xl text-purple-800"></i></p>
+      <p><i class="fa-solid fa-bars text-4xl text-purple-800"></i></p>
+    </div>
+    </div>
+  </menu>
+
+  <!-- Banner com imagem do gato e texto -->
+  <div class="flex flex-col items-center bg-gray-100 min-h-screen ">
+    <div class="flex justify-center items-center w-[95%]">
+      <div class="items-center mt-6 relative rounded-xl w-[98%] overflow-hidden shadow-lg">
+        <img src="img/WhatsApp Image 2025-03-17 at 08.05.11 (1) 1.png" alt="Gato" class="w-full h-80 object-cover">
+        <span class="flex justify-center items-center text-center absolute right-8 top-8 text-4xl font-bold text-purple-700 drop-shadow-lg mr-[10%] mt-[3%]">
+          Ajude-nos<br>a salvar<br>vidas!
+        </span>
+      </div>
+    </div>
+
+    <!-- Sobre a ACAPRA Brusque -->
+    <div class="w-full max-w-4xl bg-white rounded-xl shadow-md p-6 flex flex-col items-center mb-[2%] mt-[2%]">
+      <h2 class="text-xl font-bold text-purple-800 mb-2 text-center">Sobre a ACAPRA Brusque</h2>
+      <p class="text-center text-gray-700 text-base">
+        Somos uma ONG brusquense que vem trabalhando incansavelmente por uma causa que ultrapassa os limites apenas da proteção animal. 
+        Com os milhares de cães e gatos retirados das ruas da cidade, a Acapra Brusque já contribuiu muito, com a causa da saúde pública do município.
+        Com a seu apoio poderemos ajudar a salvar mais animais em estado de rua ou maus tratos.
+      </p>
+    </div>
+
+    <!-- Seção Adote um amigo -->
+    <div class="w-[70%]  flex flex-col md:flex-row items-center bg-gray-200 rounded-xl shadow-md mt-8 p-6 mb-[5%]">
+      <div class="flex-1 ml-[5%]">
+        <h3 class="text-lg font-bold text-purple-700 mb-5 ml-[40%]">Adote um amigo!</h3>
+        <p class="font-semibold text-purple-700 mb-5">Como faço para adotar?</p>
+        <p class="text-sm text-gray-700 mb-2 mr-[10%]">
+          <span class="font-semibold">Para adotar é simples:</span><br>
+          Existem milhares de animais esperando por um lar, por alguém que lhes dê carinho, cuidado e uma nova chance de ser feliz. 
+          Ao adotar, você não apenas salva uma vida, mas ganha um amigo leal, companheiro para todos os momentos. Eles não pedem muito apenas amor e um cantinho no seu coração. 
+          Dê esse passo de amor: adote, transforme vidas e descubra a alegria da verdadeira amizade.
+          Basta clicar no botão de adote agora e preencher o formulário, que irá abrir e esperar ser selecionado para a adoção.
+        </p>
+      </div>
+      <div class="flex flex-col flex-shrink-0 items-center mt-4 md:mt-0 md:ml-8 mr-[10%]">
+        <img src="img/high_quality_image 1.png" alt="Adoção" class="w-28 h-28 object-contain">
+        <button class="mt-2 px-6 py-3 bg-purple-700 text-white font-bold rounded-lg shadow hover:bg-purple-800 transition cursor-pointer">
+          Adote agora
+        </button>
+      </div>
+    </div>
+
+    <!-- Seção Ajude com uma doação -->
+    <div class="w-[70%]  flex flex-col md:flex-row items-center bg-gray-200 rounded-xl shadow-md mt-8 p-6 mb-[5%]">
+      <div class="flex-1 ml-[5%]">
+        <h3 class="text-lg font-bold text-purple-700 mb-5 ml-[40%]">Ajude com uma doação!</h3>
+        <p class="font-semibold text-purple-700 mb-5">Como faço para fazer a doação?</p>
+        <p class="text-sm text-gray-700 mb-2 mr-[10%]">
+          <span class="font-semibold">Para doar é fácil:</span><br>
+          Sua doação ajuda a salvar vidas e a dar um lar digno a animais abandonados.
+          Com um pequeno gesto, você faz uma grande diferença.
+          Apoie quem cuida de quem só sabe amar: doe e espalhe esperança. 
+          Basta clicar no botão de doe agora e será redirecionado para uma página onde teremos o pix da nossa associação.
+        </p>
+      </div>
+      <div class="flex flex-col flex-shrink-0 items-center mt-4 md:mt-0 md:ml-8 mr-[10%]">
+        <img src="img/image 1.png" alt="Adoção" class="w-28 h-28 object-contain">
+        <button class="mt-2 px-6 py-3 bg-purple-700 text-white font-bold rounded-lg shadow hover:bg-purple-800 transition cursor-pointer">
+          Doe agora
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
+
+
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          poppins: ['Poppins', 'sans-serif'],
+        } 
+      }
+    }
+  }
+</script>
