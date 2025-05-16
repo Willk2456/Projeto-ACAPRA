@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>ACAPRA Brusque</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <menu class="flex relative p-1 bg-white/80  backdrop-blur-md blur-border shadow-xl ">
+    <div class="ml-[10%]">
+        <img src="img\logo roxa 2.png" alt="" class="w-20 h-30"> 
+    </div>
+    <div class="text-center flex flex-col justify-center items-center ml-[7%] text-[#555484] font-extrabold font-poppins text-lg">
+        <h1>ACAPRA</h1>
+        <h1>Brusque</h1>
+    </div>
+    <div class="flex justify-between items-center space-x-16 content-between ml-[7%] font-semibold text-poppins text-lg text-[#6A0DAD]">
+        <h3>Início</h3>
+        <h3>Sobre</h3>
+        <h3>Doações</h3>
+        <h3>Adoção</h3>
+        <h3>Contato</h3>
+    </div>
+    <div class="flex flex-row items-center justify-around align-middle mr-[10%] ml-[7%] space-x-30">
+      <p><i class="fa-brands fa-instagram text-4xl text-purple-800"></i></p>
+      <p><i class="fa-brands fa-facebook text-4xl text-purple-800"></i></p>
+      <p><i class="fa-solid fa-bars text-4xl text-purple-800"></i></p>
+    </div>
+    </div>
+  </menu>
+  </header>
+
+  <section class="banner">
+    <img src="imagens/logo_dog.png" alt="Animais">
+    <h1>DOE!</h1>
+  </section>
+
+  <section class="content">
+    <p>Ajude a Transformar Vidas!<br>
+    Você pode contribuir para o bem-estar dos animais de várias formas. Escolha como deseja ajudar:</p>
+    
+    <button onclick="acao('doacoes')">Doações</button>
+    
+    <p>Aceitamos doações via Pix, conta bancária e doações físicas como ração e medicamentos.</p>
+    
+    <button onclick="acao('doar')">Doar Agora</button>
+    
+    <p>Seja Voluntário<br>
+    Ajude ativamente participando de eventos, cuidando dos animais ou oferecendo lar temporário.</p>
+    
+    <button onclick="acao('voluntario')">Quero Ser Voluntário</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
