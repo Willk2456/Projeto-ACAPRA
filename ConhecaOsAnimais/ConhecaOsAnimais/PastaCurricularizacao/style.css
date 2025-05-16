@@ -1,0 +1,140 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* Cabeçalho */
+header {
+  background: #ffffff; /* fundo branco */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+/* Logo ACAPRA */
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2em;
+  color: #6A0DAD; /* roxo */
+}
+.logo-img {
+  width: 50px;
+  height: auto;
+}
+.logo-text {
+  line-height: 1.2em;
+  color: #6A0DAD; /* roxo */
+}
+
+/* Menu central */
+nav {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+  justify-content: center;
+}
+nav a {
+  color: #6A0DAD; /* roxo */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Ícones à direita */
+.header-icone {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.icone {
+  width: 24px;
+  height: 24px;
+}
+
+.menu-icone {
+  font-size: 24px;
+  color: #6A0DAD; /* roxo */
+  cursor: pointer;
+}
+
+/* Título principal */
+.titulo {
+  text-align: center;
+  font-size: 2em;
+  margin: 20px 0;
+  color: #4b3b66;
+}
+
+/* Parte dos animais */
+.animais {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.animal {
+  background: #fff;
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.animal img {
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.nome {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Chamada */
+.chamada {
+  text-align: center;
+  margin: 30px 0 10px;
+  font-size: 1.2em;
+  color: #4b3b66;
+}
+
+/* Avaliações */
+.avaliacoes {
+  max-width: 800px;
+  margin: 20px auto;
+  background: #f0e6f6;
+  padding: 10px;
+  border-radius: 8px;
+}
+.avaliacoes h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #4b3b66;
+}
+.avaliacao {
+  background: #fff;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.avaliacao .nome {
+  font-weight: bold;
+  color: #9b6be2;
+  margin-bottom: 10px;
+}
+
+/* Rodapé */
+footer {
+  background: #4b3b66;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
