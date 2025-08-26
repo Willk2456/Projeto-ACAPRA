@@ -6,6 +6,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="src/assets/icons/logo.png" type="image/x-icon">
     <style>
         .blur-border::before {
             content: "";
@@ -17,37 +18,48 @@
             border-radius: 1rem; /* deve combinar com o do elemento principal */
         }
     </style>
-    <title>Document</title>
+    <title>Acapra</title>
 </head>
 <body class="bg-white">
-  <menu class="flex relative p-1 bg-white/80  backdrop-blur-md blur-border shadow-xl ">
-    <div class="ml-[10%]">
-        <img src="img\logo roxa 2.png" alt="" class="w-20 h-30"> 
-    </div>
-    <div class="text-center flex flex-col justify-center items-center ml-[7%] text-[#555484] font-extrabold font-poppins text-lg">
+  <header class="p-1 bg-white/80  backdrop-blur-md blur-border shadow-xl w-full">
+    <div class="flex ml-[5%] mr-[5%]">
+      <div>
+        <img src="src/assets/icons/logo.png" alt="" class="ml-10 mr-10 w-20 h-30"> 
+      </div>
+      <div class="text-center flex flex-col justify-center items-center ml-[7%] text-[#555484] font-extrabold font-poppins text-lg">
         <h1>ACAPRA</h1>
         <h1>Brusque</h1>
+      </div>
+      <div class="flex justify-between items-center space-x-16 content-between ml-[7%] font-semibold text-poppins text-lg text-[#6A0DAD]">
+        <a href="#" target="_self">
+          <h3>início</h3>
+        </a>
+        <a href="#" target="_self">
+          <h3>Sobre</h3>
+        </a>
+        <a href="src/pages/paginaDoacao.html" target="_self">
+          <h3>Doações</h3>
+        </a>
+        <a href="src/pages/paginaAdocao.html" target="_self">
+          <h3>Adoção</h3>
+        </a>
+        <a href="#" target="_self">
+          <h3>Contato</h3>
+        </a>
+      </div>
+      <div class="flex flex-row items-center justify-around ml-[7%] space-x-30">
+        <p><i class="fa-brands fa-instagram text-4xl text-purple-800"></i></p>
+        <p><i class="fa-brands fa-facebook text-4xl text-purple-800"></i></p>
+        <p><i class="fa-solid fa-bars text-4xl text-purple-800"></i></p>
+      </div>
     </div>
-    <div class="flex justify-between items-center space-x-16 content-between ml-[7%] font-semibold text-poppins text-lg text-[#6A0DAD]">
-        <h3>Início</h3>
-        <h3>Sobre</h3>
-        <h3>Doações</h3>
-        <h3>Adoção</h3>
-        <h3>Contato</h3>
-    </div>
-    <div class="flex flex-row items-center justify-around align-middle mr-[10%] ml-[7%] space-x-30">
-      <p><i class="fa-brands fa-instagram text-4xl text-purple-800"></i></p>
-      <p><i class="fa-brands fa-facebook text-4xl text-purple-800"></i></p>
-      <p><i class="fa-solid fa-bars text-4xl text-purple-800"></i></p>
-    </div>
-    </div>
-  </menu>
+  </header>
 
   <!-- Banner com imagem do gato e texto -->
   <div class="flex flex-col items-center bg-gray-100 min-h-screen ">
     <div class="flex justify-center items-center w-[95%]">
       <div class="items-center mt-6 relative rounded-xl w-[98%] overflow-hidden shadow-lg">
-        <img src="img/WhatsApp Image 2025-03-17 at 08.05.11 (1) 1.png" alt="Gato" class="w-full h-80 object-cover">
+        <img src="src/assets/illustrations/hero-banner.png" alt="Gato" class="w-full h-80 object-cover">
         <span class="flex justify-center items-center text-center absolute right-8 top-8 text-4xl font-bold text-purple-700 drop-shadow-lg mr-[10%] mt-[3%]">
           Ajude-nos<br>a salvar<br>vidas!
         </span>
@@ -78,7 +90,7 @@
         </p>
       </div>
       <div class="flex flex-col flex-shrink-0 items-center mt-4 md:mt-0 md:ml-8 mr-[10%]">
-        <img src="img/high_quality_image 1.png" alt="Adoção" class="w-28 h-28 object-contain">
+        <img src="src/assets/icons/amigo.png" alt="Adoção" class="w-28 h-28 object-contain">
         <button class="mt-2 px-6 py-3 bg-purple-700 text-white font-bold rounded-lg shadow hover:bg-purple-800 transition cursor-pointer">
           Adote agora
         </button>
@@ -99,7 +111,7 @@
         </p>
       </div>
       <div class="flex flex-col flex-shrink-0 items-center mt-4 md:mt-0 md:ml-8 mr-[10%]">
-        <img src="img/image 1.png" alt="Adoção" class="w-28 h-28 object-contain">
+        <img src="src/assets/icons/doacao.png" alt="Adoção" class="w-28 h-28 object-contain">
         <button class="mt-2 px-6 py-3 bg-purple-700 text-white font-bold rounded-lg shadow hover:bg-purple-800 transition cursor-pointer">
           Doe agora
         </button>
