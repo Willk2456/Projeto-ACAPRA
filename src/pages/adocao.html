@@ -13,9 +13,14 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
+<style type="text/tailwindcss">
+  .menu-open {
+    @apply opacity-100 visible max-h-screen translate-y-0;
+  }
+</style>
 
-  <header class="p-2 md:p-4 bg-white/80 backdrop-blur-md blur-border shadow-xl relative">
+<body>
+  <header id="nav" class="p-2 md:p-4 bg-white/80 backdrop-blur-md blur-border shadow-xl relative">
     <div class="container mx-auto px-4">
       <!-- Mobile Header -->
       <div class="flex justify-between items-center md:hidden">
@@ -26,7 +31,7 @@
             <h1 class="text-sm leading-tight">Brusque</h1>
           </div>
         </div>
-        <button id="mobileMenuToggle" class="text-purple-800 text-2xl">
+        <button id="mobileMenuToggle" class="text-purple-800 text-2xl cursor-pointer">
           <i class="fa-solid fa-bars"></i>
         </button>
       </div>
@@ -42,34 +47,40 @@
         </div>
 
         <nav class="flex space-x-8 font-semibold text-lg text-[#6A0DAD] ml-[2%] mr-[2%]">
-          <a href="../../index.html" class="hover:text-purple-800 transition">Início</a>
-          <a href="#" class="hover:text-purple-800 transition">Sobre</a>
-          <a href="doacao.html" class="hover:text-purple-800 transition">Doações</a>
-          <a href="adocao.html" class="hover:text-purple-800 transition">Adoção</a>
-          <a href="#" class="hover:text-purple-800 transition">Contato</a>
+          <a href="../../index.html" class="hover:text-purple-600 transition">Início</a>
+          <a href="sobre.html" class="hover:text-purple-600 transition">Sobre</a>
+          <a href="doacao.html" class="hover:text-purple-600 transition">Doações</a>
+          <a href="adocao.html" class="hover:text-purple-600 transition">Adoção</a>
+          <a href="contato.html" class="hover:text-purple-600 transition">Contato</a>
         </nav>
 
         <div class="flex space-x-8">
-          <i
-            class="fa-brands fa-instagram text-3xl text-purple-800 cursor-pointer hover:text-purple-600 transition"></i>
-          <i class="fa-brands fa-facebook text-3xl text-purple-800 cursor-pointer hover:text-purple-600 transition"></i>
-          <i class="fa-solid fa-bars text-3xl text-purple-800 cursor-pointer hover:text-purple-600 transition"></i>
+          <a target="_blank" href="https://www.instagram.com/acaprabrusquesc"><i class="fa-brands fa-instagram text-3xl text-purple-800 cursor-pointer hover:text-purple-600 transition"></i></a>
+          <a target="_blank" href="https://www.facebook.com/pages/Associacao%20Brusquense%20de%20Protecao%20Aos%20Animais%20-%20Acapra/304050456768695/"><i class="fa-brands fa-facebook text-3xl text-purple-800 cursor-pointer hover:text-purple-600 transition"></i></a>
         </div>
       </div>
 
       <!-- Mobile Menu -->
       <div id="mobileMenu"
-        class="md:hidden mobile-menu absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-xl z-50">
+        class="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-xl z-50
+            transition-all duration-500 ease-in-out
+            opacity-0 invisible max-h-0 -translate-y-4">
         <div class="p-4 space-y-4">
-          <a href="../../index.html" class="block py-2 text-[#6A0DAD] font-semibold border-b border-gray-200">
+          <a href="../../index.html" class="hover:text-purple-600 transition block py-2 text-[#6A0DAD] font-semibold border-b border-gray-200">
             Início
           </a>
-          <a href="#" class="block py-2 text-[#6A0DAD] font-semibold border-b border-gray-200">Sobre</a>
-          <a href="doacao.html" class="block py-2 text-[#6A0DAD] font-semibold border-b border-gray-200">
+          <a href="sobre.html" class="hover:text-purple-600 transition block py-2 text-[#6A0DAD] font-semibold border-b border-gray-200">
+            Sobre
+          </a>
+          <a href="doacao.html" class="hover:text-purple-600 transition block py-2 text-[#6A0DAD] font-semibold border-b border-gray-200">
             Doações
           </a>
-          <a href="#" class="block py-2 text-[#6A0DAD] font-semibold border-b border-gray-200">Adoção</a>
-          <a href="#" class="block py-2 text-[#6A0DAD] font-semibold border-b border-gray-200">Contato</a>
+          <a href="adocao.html" class="hover:text-purple-600 transition block py-2 text-[#6A0DAD] font-semibold border-b border-gray-200">
+            Adoção
+          </a>
+          <a href="contato.html" class="hover:text-purple-600 transition block py-2 text-[#6A0DAD] font-semibold border-b border-gray-200">
+            Contato
+          </a>
           <div class="flex justify-center space-x-12 pt-4">
             <div class="flex items-center space-x-4">
               <img src="../assets/icons/logo.png" alt="Logo ACAPRA" class="w-12 h-12 object-contain" />
@@ -79,9 +90,8 @@
               </div>
             </div>
             <div class="flex justify-center items-center space-x-8">
-              <i class="fa-brands fa-instagram text-2xl text-purple-800"></i>
-              <i class="fa-brands fa-facebook text-2xl text-purple-800"></i>
-              <i class="fa-solid fa-bars text-2xl text-purple-800"></i>
+              <a target="_blank" href="https://www.instagram.com/acaprabrusquesc"><i class="fa-brands fa-instagram text-2xl text-purple-800 cursor-pointer hover:text-purple-600 transition"></i></a>
+              <a target="_blank" href="https://www.facebook.com/pages/Associacao%20Brusquense%20de%20Protecao%20Aos%20Animais%20-%20Acapra/304050456768695/"><i class="fa-brands fa-facebook text-2xl text-purple-800 cursor-pointer hover:text-purple-600 transition"></i></a>
             </div>
           </div>
         </div>
@@ -189,6 +199,9 @@
       }
     }
   </script>
+
+  <script src="../scripts/menu.js"></script>
+
 </body>
 
 </html>
