@@ -15,7 +15,7 @@
 
 <body>
 
-  <header class="p-2 md:p-4 bg-white/80 backdrop-blur-md blur-border shadow-xl relative">
+  <header id="nav" class="p-2 md:p-4 bg-white/80 backdrop-blur-md blur-border shadow-xl relative">
     <div class="container mx-auto px-4">
       <!-- Mobile Header -->
       <div class="flex justify-between items-center md:hidden">
@@ -26,7 +26,7 @@
             <h1 class="text-sm leading-tight">Brusque</h1>
           </div>
         </div>
-        <button id="mobileMenuToggle" class="text-purple-800 text-2xl">
+        <button id="mobileMenuToggle" class="text-purple-800 text-2xl cursor-pointer">
           <i class="fa-solid fa-bars"></i>
         </button>
       </div>
@@ -42,34 +42,48 @@
         </div>
 
         <nav class="flex space-x-8 font-semibold text-lg text-[#6A0DAD] ml-[2%] mr-[2%]">
-          <a href="../../index.html" class="hover:text-purple-800 transition">Início</a>
-          <a href="#" class="hover:text-purple-800 transition">Sobre</a>
-          <a href="src/pages/doacao.html" class="hover:text-purple-800 transition">Doações</a>
-          <a href="src/pages/adocao.html" class="hover:text-purple-800 transition">Adoção</a>
-          <a href="src/pages/contato.html" class="hover:text-purple-800 transition">Contato</a>
+          <a href="../../index.html" class="hover:text-purple-600 transition">Início</a>
+          <a href="sobre.html" class="hover:text-purple-600 transition">Sobre</a>
+          <a href="doacao.html" class="hover:text-purple-600 transition">Doações</a>
+          <a href="adocao.html" class="hover:text-purple-600 transition">Adoção</a>
+          <a href="contato.html" class="hover:text-purple-600 transition">Contato</a>
         </nav>
 
+
         <div class="flex space-x-8">
-          <i
-            class="fa-brands fa-instagram text-3xl text-purple-800 cursor-pointer hover:text-purple-600 transition"></i>
-          <i class="fa-brands fa-facebook text-3xl text-purple-800 cursor-pointer hover:text-purple-600 transition"></i>
-          <i class="fa-solid fa-bars text-3xl text-purple-800 cursor-pointer hover:text-purple-600 transition"></i>
+          <a target="_blank" href="https://www.instagram.com/acaprabrusquesc"><i
+              class="fa-brands fa-instagram text-3xl text-purple-800 cursor-pointer hover:text-purple-600 transition"></i></a>
+          <a target="_blank"
+            href="https://www.facebook.com/pages/Associacao%20Brusquense%20de%20Protecao%20Aos%20Animais%20-%20Acapra/304050456768695/"><i
+              class="fa-brands fa-facebook text-3xl text-purple-800 cursor-pointer hover:text-purple-600 transition"></i></a>
         </div>
       </div>
 
       <!-- Mobile Menu -->
-      <div id="mobileMenu"
-        class="md:hidden mobile-menu absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-xl z-50">
+      <div id="mobileMenu" class="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-xl z-50
+            transition-all duration-500 ease-in-out
+            opacity-0 invisible max-h-0 -translate-y-4">
         <div class="p-4 space-y-4">
-          <a href="../../index.html" class="block py-2 text-[#6A0DAD] font-semibold border-b border-gray-200">
+          <a href="../../index.html"
+            class="block py-2 text-[#6A0DAD] font-semibold border-b border-gray-200 hover:text-purple-600 transition">
             Início
           </a>
-          <a href="#" class="block py-2 text-[#6A0DAD] font-semibold border-b border-gray-200">Sobre</a>
-          <a href="doacao.html" class="block py-2 text-[#6A0DAD] font-semibold border-b border-gray-200">
+          <a href="sobre.html"
+            class="block py-2 text-[#6A0DAD] font-semibold border-b border-gray-200 hover:text-purple-600 transition">
+            Sobre
+          </a>
+          <a href="doacao.html"
+            class="block py-2 text-[#6A0DAD] font-semibold border-b border-gray-200 hover:text-purple-600 transition">
             Doações
           </a>
-          <a href="#" class="block py-2 text-[#6A0DAD] font-semibold border-b border-gray-200">Adoção</a>
-          <a href="#" class="block py-2 text-[#6A0DAD] font-semibold border-b border-gray-200">Contato</a>
+          <a href="adocao.html"
+            class="block py-2 text-[#6A0DAD] font-semibold border-b border-gray-200 hover:text-purple-600 transition">
+            Adoção
+          </a>
+          <a href="contato.html"
+            class="block py-2 text-[#6A0DAD] font-semibold border-b border-gray-200 hover:text-purple-600 transition">
+            Contato
+          </a>
           <div class="flex justify-center space-x-12 pt-4">
             <div class="flex items-center space-x-4">
               <img src="../assets/icons/logo.png" alt="Logo ACAPRA" class="w-12 h-12 object-contain" />
@@ -79,9 +93,11 @@
               </div>
             </div>
             <div class="flex justify-center items-center space-x-8">
-              <i class="fa-brands fa-instagram text-2xl text-purple-800"></i>
-              <i class="fa-brands fa-facebook text-2xl text-purple-800"></i>
-              <i class="fa-solid fa-bars text-2xl text-purple-800"></i>
+              <a target="_blank" href="https://www.instagram.com/acaprabrusquesc"><i
+                  class="fa-brands fa-instagram text-2xl text-purple-800 cursor-pointer hover:text-purple-600 transition"></i></a>
+              <a target="_blank"
+                href="https://www.facebook.com/pages/Associacao%20Brusquense%20de%20Protecao%20Aos%20Animais%20-%20Acapra/304050456768695/"><i
+                  class="fa-brands fa-facebook text-2xl text-purple-800 cursor-pointer hover:text-purple-600 transition"></i></a>
             </div>
           </div>
         </div>
@@ -92,78 +108,83 @@
   <!--Contato-->
   <main>
     <div
-        class="w-3/4 max-w-3/4 min-h-[300px] rounded-[20px] outline-4 outline-gray-300 bg-gray-200 mx-auto flex flex-col md:flex-row justify-center md:justify-start gap-4 md:gap-8 items-center px-6 md:px-10 py-8 md:py-12 mt-8 text-center md:text-left">
-        <img src="../assets/icons/logo.png" alt="Logo"
-          class="w-30 h-32 sm:w-36 sm:h-2 md:w-40 md:h-[170px] object-contain">
-        <span class="font-poppins text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-purple-900 text-align:center">
-          <em style="text-shadow: 4px 4px 4px rgba(0,0,0,0.25)">Nossas Redes Sociais</em>
-        </span>
-      </div>
+      class="w-3/4 max-w-3/4 min-h-[300px] rounded-[20px] outline-4 outline-gray-300 bg-gray-200 mx-auto flex flex-col md:flex-row justify-center md:justify-start gap-4 md:gap-8 items-center px-6 md:px-10 py-8 md:py-12 mt-8 text-center md:text-left">
+      <img src="../assets/icons/logo.png" alt="Logo"
+        class="w-30 h-32 sm:w-36 sm:h-2 md:w-40 md:h-[170px] object-contain">
+      <span
+        class="font-poppins text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-purple-900 text-align:center">
+        <em style="text-shadow: 4px 4px 4px rgba(0,0,0,0.25)">Nossas Redes Sociais</em>
+      </span>
+    </div>
     <section class="w-full max-w-3xl mx-auto p-6">
 
-  <!-- Eventos + Formulários -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+      <!-- Eventos + Formulários -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
 
-    <!-- Eventos -->
-    <div class="bg-gray-100 p-4 rounded-lg shadow-md">
-      <h2 class="text-purple-900 font-bold text-lg mb-2">Eventos</h2>
-      <p class="text-sm text-gray-700 mb-3">
-        Aqui disponibilizaremos os eventos que estão para acontecer e suas datas
-      </p>
-      <img src="../assets/illustrations/iconeEventos.png" alt="Evento" class="rounded-md mb-3">
-      <p class="text-sm text-purple-900 font-bold">Data: 08/08/2015</p>
-      <p class="text-sm text-purple-900 font-bold">Horário: 19h</p>
-    </div>
+        <!-- Eventos -->
+        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+          <h2 class="text-purple-900 font-bold text-lg mb-2">Eventos</h2>
+          <p class="text-sm text-gray-700 mb-3">
+            Aqui disponibilizaremos os eventos que estão para acontecer e suas datas
+          </p>
+          <img src="../assets/illustrations/iconeEventos.png" alt="Evento" class="rounded-md mb-3">
+          <p class="text-sm text-purple-900 font-bold">Data: 08/08/2015</p>
+          <p class="text-sm text-purple-900 font-bold">Horário: 19h</p>
+        </div>
 
-    <!-- Formulários -->
-    <div class="bg-gray-100 p-4 rounded-lg shadow-md flex flex-col items-center">
-      <h2 class="text-purple-900 font-bold text-lg mb-4">Formulários para adoção</h2>
-      
-      <button class="flex items-center gap-2 bg-purple-600 text-white px-4 py-2 rounded-lg mb-3 hover:bg-purple-700 transition">
-        <img src="../assets/illustrations/IconeDog.png" alt="Cachorro" class="w-6 h-6"> 
-        <a href="adocao.html" class="hover:text-purple-800 transition">Adote um Cachorro</a>
+        <!-- Formulários -->
+        <div class="bg-gray-100 p-4 rounded-lg shadow-md flex flex-col items-center">
+          <h2 class="text-purple-900 font-bold text-lg mb-4">Formulários para adoção</h2>
 
-      </button>
-      <button class="flex items-center gap-2 bg-purple-600 text-white px-4 py-2 rounded-lg mb-3 hover:bg-purple-700 transition">
-        <img src="../assets/illustrations/iconeCat.png" alt="Gato" class="w-6 h-6"> 
-        <a href="adocao.html" class="hover:text-purple-800 transition">Adote um Gato</a>
-      </button>
-      
-        <a  href="doacao.html" class="flex items-center gap-2 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition hover:text-purple-800 transition">
-          <img src="../assets/illustrations/iconeDonation.png" alt="Doação" class="w-6 h-6">
-          Faça uma Doação
-        </a>
-      
-    </div>
-  </div>
+          <button
+            class="flex items-center gap-2 bg-purple-600 text-white px-4 py-2 rounded-lg mb-3 hover:bg-purple-700 transition">
+            <img src="../assets/illustrations/IconeDog.png" alt="Cachorro" class="w-6 h-6">
+            <a href="adocao.html" class="hover:text-purple-800 transition">Adote um Cachorro</a>
 
-  <!-- Contatos -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-    <!-- Instagram -->
-    <div class="bg-white p-4 rounded-lg shadow-md flex items-center gap-3 cursor-pointer"
-         onclick="window.open('https://www.instagram.com/acaprabrusquesc','_blank')">
-      <img src="../assets/icons/instagram.png" alt="Instagram" class="w-8 h-8">
-      <p class="font-bold text-purple-900">@acaprabrusquesc</p>
-    </div>
-    
-    <!-- Facebook -->
-    <div class="bg-white p-4 rounded-lg shadow-md flex items-center gap-3 cursor-pointer"
-         onclick="window.open('https://www.facebook.com/pages/Associacao%20Brusquense%20de%20Protecao%20Aos%20Animais%20-%20Acapra/304050456768695/#','_blank')">
-      <img src="../assets/icons/facebook.png" alt="Facebook" class="w-8 h-8">
-      <p class="font-bold text-purple-900">
-        Associacao Brusquense de Protecao Aos Animais – Acapra
-      </p>
-    </div>
-  </div>
+          </button>
+          <button
+            class="flex items-center gap-2 bg-purple-600 text-white px-4 py-2 rounded-lg mb-3 hover:bg-purple-700 transition">
+            <img src="../assets/illustrations/iconeCat.png" alt="Gato" class="w-6 h-6">
+            <a href="adocao.html" class="hover:text-purple-800 transition">Adote um Gato</a>
+          </button>
 
-  <!-- O que levar para adoção -->
-  <div class="bg-gray-100 p-4 rounded-lg shadow-md mt-6 text-center">
-    <h2 class="text-purple-900 font-bold mb-4">O que é necessário para a adoção</h2>
-    <img src="../assets/illustrations/oQueENecessarioParaAdocao.png" alt="Informações para adoção" class="w-full rounded-md">
-  </div>
-</section>
+          <a href="doacao.html"
+            class="flex items-center gap-2 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition hover:text-purple-800 transition">
+            <img src="../assets/illustrations/iconeDonation.png" alt="Doação" class="w-6 h-6">
+            Faça uma Doação
+          </a>
 
+        </div>
       </div>
+
+      <!-- Contatos -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+        <!-- Instagram -->
+        <div class="bg-white p-4 rounded-lg shadow-md flex items-center gap-3 cursor-pointer"
+          onclick="window.open('https://www.instagram.com/acaprabrusquesc','_blank')">
+          <img src="../assets/icons/instagram.png" alt="Instagram" class="w-8 h-8">
+          <p class="font-bold text-purple-900">@acaprabrusquesc</p>
+        </div>
+
+        <!-- Facebook -->
+        <div class="bg-white p-4 rounded-lg shadow-md flex items-center gap-3 cursor-pointer"
+          onclick="window.open('https://www.facebook.com/pages/Associacao%20Brusquense%20de%20Protecao%20Aos%20Animais%20-%20Acapra/304050456768695/#','_blank')">
+          <img src="../assets/icons/facebook.png" alt="Facebook" class="w-8 h-8">
+          <p class="font-bold text-purple-900">
+            Associacao Brusquense de Protecao Aos Animais – Acapra
+          </p>
+        </div>
+      </div>
+
+      <!-- O que levar para adoção -->
+      <div class="bg-gray-100 p-4 rounded-lg shadow-md mt-6 text-center">
+        <h2 class="text-purple-900 font-bold mb-4">O que é necessário para a adoção</h2>
+        <img src="../assets/illustrations/oQueENecessarioParaAdocao.png" alt="Informações para adoção"
+          class="w-full rounded-md">
+      </div>
+    </section>
+
+    </div>
     </section>
   </main>
 
