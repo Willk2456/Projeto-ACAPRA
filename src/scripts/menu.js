@@ -20,10 +20,10 @@ function toggleMobileMenu() {
 
     setTimeout(() => {
         if (!isMenuOpen) {
-            banner.classList.toggle('hidden');
-            relative.classList.add('relative');
             menuIcon.classList.remove('fa-xmark');
             menuIcon.classList.add('fa-bars');
+            banner.classList.toggle('hidden');
+            relative.classList.add('relative');
         }
     }, 300);
     

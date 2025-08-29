@@ -8,34 +8,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <style>
-    .blur-border::before {
-      content: "";
-      position: absolute;
-      inset: -10px;
-      background: rgba(255, 255, 255, 0.2);
-      filter: blur(20px);
-      z-index: -1;
-      border-radius: 1rem;
-    }
-
-    .mobile-menu {
-      transform: translateY(-100%);
-      transition: transform 0.3s ease-in-out;
-    }
-
-    .mobile-menu.show {
-      transform: translateY(0);
+    crossorigin="anonymous" referrerpolicy="no-referrer" 
+  />
+  <style type="text/tailwindcss">
+    .menu-open {
+      @apply opacity-100 visible max-h-screen translate-y-0;
     }
   </style>
+
   <title>Acapra</title>
 </head>
 
 <body class="bg-white">
   <header id="nav" class="p-2 md:p-4 bg-white/80 backdrop-blur-md blur-border shadow-xl relative">
     <div class="container mx-auto px-4">
-      <!-- Mobile Header -->
       <div class="flex justify-between items-center md:hidden">
         <div class="flex items-center space-x-3">
           <img src="../assets/icons/logo.png" alt="Logo ACAPRA" class="w-12 h-12 object-contain" />
@@ -49,7 +35,6 @@
         </button>
       </div>
 
-      <!-- Desktop Header -->
       <div class="hidden md:flex items-center justify-between">
         <div class="flex items-center space-x-6">
           <img src="../assets/icons/logo.png" alt="Logo ACAPRA" class="w-20 h-20 object-contain" />
@@ -77,7 +62,6 @@
         </div>
       </div>
 
-      <!-- Mobile Menu -->
       <div id="mobileMenu" class="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-xl z-50
             transition-all duration-500 ease-in-out
             opacity-0 invisible max-h-0 -translate-y-4">
@@ -123,22 +107,22 @@
     </div>
   </header>
   <main>
-    <section class="w-full h-fit mt-16">
-      <img src="../assets/illustrations/hero-historia.png" alt="Banner" class="w-3/4 rounded-[20px] mx-auto">
+    <section class="w-full h-fit mt-8 md:mt-16 px-4">
+      <img src="../assets/illustrations/hero-historia.png" alt="Banner" class="w-full md:w-3/4 rounded-[20px] mx-auto">
     </section>
 
-    <section class="w-full h-fit my-11">
-      <h1 class="font-semibold font-poppins text-[34px] text-purple-800 text-center">
+    <section class="w-full h-fit my-6 md:my-11 px-4">
+      <h1 class="font-semibold font-poppins text-2xl md:text-[34px] text-purple-800 text-center">
         História da ACAPRA
         <br>
         Brusque
       </h1>
     </section>
 
-    <section class="w-full h-fit">
-      <div class="w-4/5 bg-[#E9E9E9] outline-3 outline-[#8E8E8E] rounded-[20px] py-6 px-12 mx-auto"
+    <section class="w-full h-fit px-4">
+      <div class="w-full md:w-4/5 bg-[#E9E9E9] outline-3 outline-[#8E8E8E] rounded-[20px] py-4 md:py-6 px-4 md:px-12 mx-auto"
         style="box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);">
-        <p class="text-center font-poppins text-2xl font-medium text-black">
+        <p class="text-center font-poppins text-lg md:text-2xl font-medium text-black">
           A ACAPRA (Associação Catarinense de Proteção aos Animais) foi fundada com o objetivo de combater o abandono e
           os maus-tratos contra os animais. Surgiu da iniciativa de um grupo de voluntários apaixonados por causas
           animais, que buscavam formas de oferecer acolhimento, atendimento veterinário e campanhas de adoção. Desde sua
@@ -147,47 +131,49 @@
       </div>
     </section>
 
-    <section class="w-full h-fit mt-32 my-16">
-      <div class="max-w-[1650px] h-fit mx-auto flex justify-center items-center gap-40 mb-12">
-        <div class="flex flex-col gap-12">
-          <span class="font-semibold font-poppins text-[34px] text-purple-800 text-center">
+    <section class="w-full h-fit mt-12 md:mt-32 my-8 md:my-16 px-4">
+      <div class="max-w-[1650px] h-fit mx-auto flex flex-col lg:flex-row lg:justify-center lg:items-start gap-8 lg:gap-40 mb-8 md:mb-12">
+        <div class="flex flex-col gap-6 md:gap-12">
+          <span class="font-semibold font-poppins text-2xl md:text-[34px] text-purple-800 text-center">
             Linha do Tempo - Marcos Importantes
           </span>
-          <div class="w-fit h-fit bg-[#E9E9E9] outline-3 outline-[#8E8E8E] rounded-[20px] py-8 px-8 flex gap-8"
+          <div class="w-full bg-[#E9E9E9] outline-3 outline-[#8E8E8E] rounded-[20px] py-4 md:py-8 px-4 md:px-8"
             style="box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);">
-            <div class="w-fit h-fit flex flex-col gap-10">
-              <div class="w-[270px] h-[70px] bg-purple-600 flex items-center justify-center rounded-[10px]">
-                <span class="font-poppins text-2xl font-medium text-white">1998</span>
-              </div>
-              <div class="w-[270px] h-[70px] bg-blue-600 flex items-center justify-center rounded-[10px]">
-                <span class="font-poppins text-2xl font-medium text-white">2010</span>
-              </div>
-              <div class="w-[270px] h-[70px] bg-red-600 flex items-center justify-center rounded-[10px]">
-                <span class="font-poppins text-2xl font-medium text-white">2020</span>
-              </div>
-            </div>
-            <div>
-              <div class="w-fit h-fit flex flex-col gap-10">
-                <div class="w-[270px] h-[70px] bg-green-600 flex items-center justify-center rounded-[10px]">
-                  <span class="font-poppins text-2xl font-medium text-white">2002</span>
+
+            <div class="flex flex-col sm:flex-row gap-4 md:gap-8 md:justify-center sm:justify-center">
+              <div class="flex flex-col gap-4 md:gap-10">
+                <div class="w-full sm:w-[200px] md:w-[270px] h-[50px] md:h-[70px] bg-purple-600 flex items-center justify-center rounded-[10px]">
+                  <span class="font-poppins text-lg md:text-2xl font-medium text-white">1998</span>
                 </div>
-                <div class="w-[270px] h-[70px] bg-cyan-600 flex items-center justify-center rounded-[10px]">
-                  <span class="font-poppins text-2xl font-medium text-white">2015</span>
+                <div class="w-full sm:w-[200px] md:w-[270px] h-[50px] md:h-[70px] bg-blue-600 flex items-center justify-center rounded-[10px]">
+                  <span class="font-poppins text-lg md:text-2xl font-medium text-white">2010</span>
                 </div>
-                <div class="w-[270px] h-[70px] bg-orange-600 flex items-center justify-center rounded-[10px]">
-                  <span class="font-poppins text-2xl font-medium text-white">2023</span>
+                <div class="w-full sm:w-[200px] md:w-[270px] h-[50px] md:h-[70px] bg-red-600 flex items-center justify-center rounded-[10px]">
+                  <span class="font-poppins text-lg md:text-2xl font-medium text-white">2020</span>
+                </div>
+              </div>
+              <div class="flex flex-col gap-4 md:gap-10">
+                <div class="w-full sm:w-[200px] md:w-[270px] h-[50px] md:h-[70px] bg-green-600 flex items-center justify-center rounded-[10px]">
+                  <span class="font-poppins text-lg md:text-2xl font-medium text-white">2002</span>
+                </div>
+                <div class="w-full sm:w-[200px] md:w-[270px] h-[50px] md:h-[70px] bg-cyan-600 flex items-center justify-center rounded-[10px]">
+                  <span class="font-poppins text-lg md:text-2xl font-medium text-white">2015</span>
+                </div>
+                <div class="w-full sm:w-[200px] md:w-[270px] h-[50px] md:h-[70px] bg-orange-600 flex items-center justify-center rounded-[10px]">
+                  <span class="font-poppins text-lg md:text-2xl font-medium text-white">2023</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="flex flex-col gap-12">
-          <span class="font-semibold font-poppins text-[34px] text-purple-800 text-center">
-            Como Denunciar Maus- tratos contra animais
+
+        <div class="flex flex-col gap-6 md:gap-12">
+          <span class="font-semibold font-poppins text-2xl md:text-[34px] text-purple-800 text-center">
+            Como Denunciar Maus-tratos contra animais
           </span>
-          <div class="w-fit h-fit bg-[#E9E9E9] outline-3 outline-[#8E8E8E] rounded-[20px] py-8 px-8 flex gap-8"
+          <div class="w-full bg-[#E9E9E9] outline-3 outline-[#8E8E8E] rounded-[20px] py-4 md:py-8 px-4 md:px-8"
             style="box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);">
-            <span class="font-poppins text-2xl font-medium text-black text-justify">
+            <span class="font-poppins text-base md:text-2xl font-medium text-black text-justify block">
               Polícia Militar Ambiental - Ligue para 190 ou procure a delegacia mais próxima.
               Ministério Público - Pode ser acionado para abertura de investigações.
               Prefeituras e Ouvidorias Municipais - Algumas cidades possuem canais específicos para esse tipo de
@@ -198,39 +184,42 @@
           </div>
         </div>
       </div>
-      <div class="max-w-[1040px] mx-auto flex justify-center items-center gap-20">
-        <div class="w-fit h-fit flex flex-col gap-10">
-          <div class="w-[470px] h-[94px] bg-purple-600 text-center rounded-[10px]">
-            <span class="block p-[14px] font-poppins text-2xl font-medium text-white">
-              Fundação da ACAPRA por um grupo de ativistas de Santa Catarina.
-            </span>
+
+      <div class="max-w-[1040px] mx-auto">
+        <div class="flex flex-col lg:flex-row lg:justify-center lg:items-start gap-8 lg:gap-20">
+          <div class="flex flex-col gap-4 md:gap-10">
+            <div class="w-full lg:w-[470px] min-h-[70px] md:min-h-[94px] bg-purple-600 text-center rounded-[10px] flex items-center justify-center">
+              <span class="block p-3 md:p-[14px] font-poppins text-lg md:text-2xl font-medium text-white">
+                Fundação da ACAPRA por um grupo de ativistas de Santa Catarina.
+              </span>
+            </div>
+            <div class="w-full lg:w-[470px] min-h-[70px] md:min-h-[94px] bg-green-600 text-center rounded-[10px] flex items-center justify-center">
+              <span class="block p-3 md:p-[14px] font-poppins text-lg md:text-2xl font-medium text-white">
+                Lançamento das primeiras campanhas de adoção e castração.
+              </span>
+            </div>
+            <div class="w-full lg:w-[470px] min-h-[70px] md:min-h-[94px] bg-red-600 text-center rounded-[10px] flex items-center justify-center">
+              <span class="block p-3 md:p-[14px] font-poppins text-lg md:text-2xl font-medium text-white">
+                Expansão das atividades para outras regiões do estado.
+              </span>
+            </div>
           </div>
-          <div class="w-[470px] h-[94px] bg-green-600 text-center rounded-[10px]">
-            <span class="block p-[14px] font-poppins text-2xl font-medium text-white">
-              Lançamento das primeiras campanhas de adoção e castração.
-            </span>
-          </div>
-          <div class="w-[470px] h-[94px] bg-red-600 text-center rounded-[10px]">
-            <span class="block p-[14px] font-poppins text-2xl font-medium text-white">
-              Expansão das atividades para outras regiões do estado.
-            </span>
-          </div>
-        </div>
-        <div class="w-fit h-fit flex flex-col gap-10">
-          <div class="w-[470px] h-[94px] bg-blue-600 text-center rounded-[10px]">
-            <span class="block p-[14px] font-poppins text-2xl font-medium text-white">
-              Criação do primeiro abrigo para animais resgatados.
-            </span>
-          </div>
-          <div class="w-[470px] h-[94px] bg-cyan-600 text-center rounded-[10px]">
-            <span class="block p-[14px] font-poppins text-2xl font-medium text-white">
-              Parcerias com clínicas veterinárias para atendimento gratuito a animais de rua.
-            </span>
-          </div>
-          <div class="w-[470px] h-[94px] bg-orange-600 text-center rounded-[10px]">
-            <span class="block p-[14px] font-poppins text-2xl font-medium text-white">
-              Luta pela aprovação de leis mais severas contra maus-tratos em Santa Catarina.
-            </span>
+          <div class="flex flex-col gap-4 md:gap-10">
+            <div class="w-full lg:w-[470px] min-h-[70px] md:min-h-[94px] bg-blue-600 text-center rounded-[10px] flex items-center justify-center">
+              <span class="block p-3 md:p-[14px] font-poppins text-lg md:text-2xl font-medium text-white">
+                Criação do primeiro abrigo para animais resgatados.
+              </span>
+            </div>
+            <div class="w-full lg:w-[470px] min-h-[70px] md:min-h-[94px] bg-cyan-600 text-center rounded-[10px] flex items-center justify-center">
+              <span class="block p-3 md:p-[14px] font-poppins text-lg md:text-2xl font-medium text-white">
+                Parcerias com clínicas veterinárias para atendimento gratuito a animais de rua.
+              </span>
+            </div>
+            <div class="w-full lg:w-[470px] min-h-[70px] md:min-h-[94px] bg-orange-600 text-center rounded-[10px] flex items-center justify-center">
+              <span class="block p-3 md:p-[14px] font-poppins text-lg md:text-2xl font-medium text-white">
+                Luta pela aprovação de leis mais severas contra maus-tratos em Santa Catarina.
+              </span>
+            </div>
           </div>
         </div>
       </div>
