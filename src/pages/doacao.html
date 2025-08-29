@@ -1,3 +1,192 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>ACAPRA Brusque</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<style type="text/tailwindcss">
+  .menu-open {
+    @apply opacity-100 visible max-h-screen translate-y-0;
+  }
+</style>
+
+<body class="overflow-x-hidden">
+  <!-- Menu Desktop/Mobile -->
+  <header id="nav" class="p-2 md:p-4 bg-white/80 backdrop-blur-md blur-border shadow-xl relative">
+    <div class="container mx-auto px-4">
+      <!-- Mobile Header -->
+      <div class="flex justify-between items-center md:hidden">
+        <div class="flex items-center space-x-3">
+          <img src="../assets/icons/logo.png" alt="Logo ACAPRA" class="w-12 h-12 object-contain" />
+          <div class="text-[#555484] font-bold">
+            <h1 class="text-sm leading-tight">ACAPRA</h1>
+            <h1 class="text-sm leading-tight">Brusque</h1>
+          </div>
+        </div>
+        <button id="mobileMenuToggle" class="text-purple-800 text-2xl cursor-pointer">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Desktop Header -->
+      <div class="hidden md:flex items-center justify-between">
+        <div class="flex items-center space-x-6">
+          <img src="../assets/icons/logo.png" alt="Logo ACAPRA" class="w-20 h-20 object-contain" />
+          <div class="text-[#555484] font-extrabold text-lg">
+            <h1>ACAPRA</h1>
+            <h1>Brusque</h1>
+          </div>
+        </div>
+
+        <nav class="flex space-x-8 font-semibold text-lg text-[#6A0DAD] ml-[2%] mr-[2%]">
+          <a href="../../index.html" class="hover:text-purple-600 transition">Início</a>
+          <a href="sobre.html" class="hover:text-purple-600 transition">Sobre</a>
+          <a href="doacao.html" class="hover:text-purple-600 transition">Doações</a>
+          <a href="adocao.html" class="hover:text-purple-600 transition">Adoção</a>
+          <a href="contato.html" class="hover:text-purple-600 transition">Contato</a>
+        </nav>
+
+
+        <div class="flex space-x-8">
+          <a target="_blank" href="https://www.instagram.com/acaprabrusquesc"><i
+              class="fa-brands fa-instagram text-3xl text-purple-800 cursor-pointer hover:text-purple-600 transition"></i></a>
+          <a target="_blank"
+            href="https://www.facebook.com/pages/Associacao%20Brusquense%20de%20Protecao%20Aos%20Animais%20-%20Acapra/304050456768695/"><i
+              class="fa-brands fa-facebook text-3xl text-purple-800 cursor-pointer hover:text-purple-600 transition"></i></a>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-xl z-50
+            transition-all duration-500 ease-in-out
+            opacity-0 invisible max-h-0 -translate-y-4">
+        <div class="p-4 space-y-4">
+          <a href="../../index.html"
+            class="block py-2 text-[#6A0DAD] font-semibold border-b border-gray-200 hover:text-purple-600 transition">
+            Início
+          </a>
+          <a href="sobre.html"
+            class="block py-2 text-[#6A0DAD] font-semibold border-b border-gray-200 hover:text-purple-600 transition">
+            Sobre
+          </a>
+          <a href="doacao.html"
+            class="block py-2 text-[#6A0DAD] font-semibold border-b border-gray-200 hover:text-purple-600 transition">
+            Doações
+          </a>
+          <a href="adocao.html"
+            class="block py-2 text-[#6A0DAD] font-semibold border-b border-gray-200 hover:text-purple-600 transition">
+            Adoção
+          </a>
+          <a href="contato.html"
+            class="block py-2 text-[#6A0DAD] font-semibold border-b border-gray-200 hover:text-purple-600 transition">
+            Contato
+          </a>
+          <div class="flex justify-center space-x-12 pt-4">
+            <div class="flex items-center space-x-4">
+              <img src="../assets/icons/logo.png" alt="Logo ACAPRA" class="w-12 h-12 object-contain" />
+              <div class="text-[#555484] font-bold">
+                <h1 class="text-sm leading-tight">ACAPRA</h1>
+                <h1 class="text-sm leading-tight">Brusque</h1>
+              </div>
+            </div>
+            <div class="flex justify-center items-center space-x-8">
+              <a target="_blank" href="https://www.instagram.com/acaprabrusquesc"><i
+                  class="fa-brands fa-instagram text-2xl text-purple-800 cursor-pointer hover:text-purple-600 transition"></i></a>
+              <a target="_blank"
+                href="https://www.facebook.com/pages/Associacao%20Brusquense%20de%20Protecao%20Aos%20Animais%20-%20Acapra/304050456768695/"><i
+                  class="fa-brands fa-facebook text-2xl text-purple-800 cursor-pointer hover:text-purple-600 transition"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="w-full flex items-center justify-center">
+      <img src="../assets/illustrations/hero-adocao.png" alt="Animais"
+        class="mt-12 w-[90%] sm:w-4/5 lg:w-3/5 rounded-[20px] sm:rounded-[30px] outline-1 outline-fuchsia-500 object-cover">
+
+      <h1 id="banner"
+        class="absolute font-poppins text-5xl sm:text-5xl md:text-8xl lg:text-9xl text-fuchsia-500 font-extrabold drop-shadow-lg">
+        DOE!
+      </h1>
+    </section>
+
+    <section class="mt-12 w-full h-full px-4">
+      <div
+        class="flex flex-col gap-10 sm:gap-12 w-full max-w-5xl h-auto bg-gray-300 rounded-[20px] mx-auto px-6 sm:px-12 md:px-20 lg:px-[125px] py-10 sm:py-14 md:py-20 shadow-[0_0_8px_3px_rgba(170,0,255,0.3)] mb-7">
+
+        <p class="font-medium text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center font-poppins">
+          Ajude a Transformar Vidas!
+          <br>
+          Você pode contribuir para o bem-estar dos animais de várias formas. Escolha como deseja ajudar:
+        </p>
+
+        <button
+          class="block w-[200px] sm:w-[240px] md:w-[265px] h-[65px] sm:h-[75px] md:h-[85px] bg-purple-700 hover:bg-purple-600 rounded-2xl mx-auto outline-1 outline-fuchsia-500 shadow-[0_0_8px_3px_rgba(240,0,255,0.5)] cursor-pointer">
+          <span
+            class="w-full h-full font-poppins font-medium text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl flex items-center justify-center">
+            Doações
+          </span>
+        </button>
+
+        <p class="font-medium text-lg sm:text-xl md:text-2xl lg:text-3xl text-center font-poppins">
+          Aceitamos doações via Pix, conta bancária e doações físicas como ração e medicamentos.
+        </p>
+
+        <button
+          class="block w-[200px] sm:w-[240px] md:w-[265px] h-[65px] sm:h-[75px] md:h-[85px] bg-purple-700 hover:bg-purple-600 rounded-2xl mx-auto outline-1 outline-fuchsia-500 shadow-[0_0_8px_3px_rgba(240,0,255,0.5)] cursor-pointer">
+          <span
+            class="w-full h-full font-poppins font-medium text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl flex items-center justify-center">
+            Doar agora
+          </span>
+        </button>
+
+        <p class="font-medium text-lg sm:text-xl md:text-2xl lg:text-3xl text-center font-poppins">
+          Seja Voluntário
+          <br>
+          Ajude ativamente participando de eventos, cuidando dos animais ou oferecendo lar temporário.
+        </p>
+
+        <button
+          class="block w-[240px] sm:w-[280px] md:w-[320px] lg:w-[350px] h-[65px] sm:h-[75px] md:h-[85px] bg-purple-700 hover:bg-purple-600 rounded-2xl mx-auto outline-1 outline-fuchsia-500 shadow-[0_0_8px_3px_rgba(240,0,255,0.5)] cursor-pointer">
+          <span
+            class="w-full h-full font-poppins font-medium text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl flex items-center justify-center">
+            Quero ser voluntário
+          </span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <script src="../scripts/menu.js"></script>
+
+</body>
+
+=======
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -174,4 +363,5 @@
 
 </body>
 
+>>>>>>> e1d11b8e5a770df237815c1ab5fc5b3bc148ae8f
 </html>
