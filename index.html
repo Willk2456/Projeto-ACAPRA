@@ -23,12 +23,16 @@
     .menu-open {
       @apply opacity-100 visible max-h-screen translate-y-0;
     }
+
+    .botao {
+      transition: transform 0.5s ease;
+    }
   </style>
   <title>Acapra</title>
 </head>
 
 <body class="bg-white">
-  <header id="nav" class="p-2 md:p-4 bg-white/80 backdrop-blur-md blur-border shadow-xl relative">
+  <header id="nav" class="p-2 md:p-4 bg-white/80 backdrop-blur-md blur-border shadow-xl relative z-50">
     <div class="container mx-auto px-4">
       <div class="flex justify-between items-center md:hidden">
         <div class="flex items-center space-x-3">
@@ -146,7 +150,9 @@
           <div class="flex flex-col items-center">
             <img src="src/assets/icons/amigo.png" alt="Adoção" class="w-20 h-20 md:w-24 md:h-24 object-contain mb-4">
             <button
-              class="px-6 py-3 bg-purple-700 text-white font-bold rounded-lg shadow hover:bg-purple-800 transition">
+              onclick="window.location.href='src/pages/adocao.html'"
+              class="px-6 py-3 bg-purple-700 text-white font-bold rounded-lg shadow hover:bg-purple-800 cursor-pointer transition botao"
+              onmouseover="this.style.transform = 'scale(1.1)'" onmouseout="this.style.transform = 'scale(1)'">
               Adote agora
             </button>
           </div>
@@ -170,7 +176,9 @@
           <div class="flex flex-col items-center">
             <img src="src/assets/icons/doacao.png" alt="Doação" class="w-20 h-20 md:w-28 md:h-28 object-contain mb-4">
             <button
-              class="px-6 py-3 bg-purple-700 text-white font-bold rounded-lg shadow hover:bg-purple-800 transition">
+              onclick="window.location.href = 'src/pages/doacao.html'"
+              class="px-6 py-3 bg-purple-700 text-white font-bold rounded-lg shadow hover:bg-purple-800 transition botao cursor-pointer"
+              onmouseover="this.style.transform = 'scale(1.1)'" onmouseout="this.style.transform = 'scale(1)'">
               Doe agora
             </button>
           </div>
