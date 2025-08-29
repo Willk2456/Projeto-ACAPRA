@@ -14,16 +14,24 @@ function toggleMobileMenu() {
     if (isMenuOpen) {
         menuIcon.classList.remove('fa-bars');
         menuIcon.classList.add('fa-xmark');
-        banner.classList.toggle('hidden');
-        relative.classList.remove('relative');
+        if (banner) {
+            banner.classList.toggle('hidden');
+        }
+        if (relative) {
+            relative.classList.remove('relative');
+        }
     }
 
     setTimeout(() => {
         if (!isMenuOpen) {
             menuIcon.classList.remove('fa-xmark');
             menuIcon.classList.add('fa-bars');
-            banner.classList.toggle('hidden');
-            relative.classList.add('relative');
+            if (banner) {
+                banner.classList.toggle('hidden');
+            }
+            if (relative) {
+                relative.classList.add('relative');
+            }
         }
     }, 300);
     

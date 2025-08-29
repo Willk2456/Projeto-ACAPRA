@@ -17,6 +17,10 @@
     .menu-open {
       @apply opacity-100 visible max-h-screen translate-y-0;
     }
+
+    .botao {
+      transition: transform 0.5s ease;
+    }
   </style>
 </head>
 
@@ -132,23 +136,28 @@
           <p class="text-sm text-purple-900 font-bold">Horário: 19h</p>
         </div>
 
-        <div class="bg-gray-100 p-4 rounded-lg shadow-md flex flex-col items-center">
+        <div id="Formularios" class="bg-gray-100 p-4 rounded-lg shadow-md flex flex-col items-center botao transition-all duration-700 ease-in hover:border-2 hover:border-purple-700">
           <h2 class="text-purple-900 font-bold text-lg mb-4">Formulários para adoção</h2>
 
           <button
-            class="flex items-center gap-2 bg-purple-600 text-white px-4 py-2 rounded-lg mb-3 hover:bg-purple-700 transition">
+            onclick="window.open('https://forms.gle/bQYFtEDo2iwMqyR57')"
+            class="flex items-center gap-2 bg-purple-600 text-white px-4 py-2 rounded-lg mb-3 hover:bg-purple-700 transition botao"
+            onmouseover="this.style.transform= 'scale(1.1)'" onmouseout="this.style.transform = 'scale(1)'">
             <img src="../assets/illustrations/IconeDog.png" alt="Cachorro" class="w-6 h-6">
-            <a href="adocao.html" class="hover:text-purple-800 transition">Adote um Cachorro</a>
+            <a>Adote um Cachorro</a>
 
           </button>
           <button
-            class="flex items-center gap-2 bg-purple-600 text-white px-4 py-2 rounded-lg mb-3 hover:bg-purple-700 transition">
+            onclick="window.open('https://forms.gle/xTgGbvtz3wD5rUPv6')"
+            class="flex items-center gap-2 bg-purple-600 text-white px-4 py-2 rounded-lg mb-3 hover:bg-purple-700 transition botao"
+            onmouseover="this.style.transform= 'scale(1.1)'" onmouseout="this.style.transform = 'scale(1)'">
             <img src="../assets/illustrations/iconeCat.png" alt="Gato" class="w-6 h-6">
-            <a href="adocao.html" class="hover:text-purple-800 transition">Adote um Gato</a>
+            <a>Adote um Gato</a>
           </button>
 
-          <a href="doacao.html"
-            class="flex items-center gap-2 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition hover:text-purple-800">
+          <a href="pix.html"
+            class="flex items-center gap-2 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition botao"
+            onmouseover="this.style.transform= 'scale(1.1)'" onmouseout="this.style.transform = 'scale(1)'">
             <img src="../assets/illustrations/iconeDonation.png" alt="Doação" class="w-6 h-6">
             Faça uma Doação
           </a>
@@ -157,14 +166,16 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-        <div class="bg-white p-4 rounded-lg shadow-md flex items-center gap-3 cursor-pointer"
-          onclick="window.open('https://www.instagram.com/acaprabrusquesc','_blank')">
+        <div class="bg-white p-4 rounded-lg shadow-md flex items-center gap-3 cursor-pointer botao hover:border-purple-700 hover:border-2 botao"
+          onclick="window.open('https://www.instagram.com/acaprabrusquesc','_blank')"
+          onmouseover="this.style.transform= 'scale(1.03)'" onmouseout="this.style.transform = 'scale(1)'">
           <img src="../assets/icons/instagram.png" alt="Instagram" class="w-8 h-8">
           <p class="font-bold text-purple-900">@acaprabrusquesc</p>
         </div>
 
-        <div class="bg-white p-4 rounded-lg shadow-md flex items-center gap-3 cursor-pointer"
-          onclick="window.open('https://www.facebook.com/pages/Associacao%20Brusquense%20de%20Protecao%20Aos%20Animais%20-%20Acapra/304050456768695/#','_blank')">
+        <div class="bg-white p-4 rounded-lg shadow-md flex items-center gap-3 cursor-pointer botao hover:border-purple-700 hover:border-2 botao"
+          onclick="window.open('https://www.facebook.com/pages/Associacao%20Brusquense%20de%20Protecao%20Aos%20Animais%20-%20Acapra/304050456768695/#','_blank')"
+          onmouseover="this.style.transform= 'scale(1.03)'" onmouseout="this.style.transform = 'scale(1)'">
           <img src="../assets/icons/facebook.png" alt="Facebook" class="w-8 h-8">
           <p class="font-bold text-purple-900">
             Associacao Brusquense de Protecao Aos Animais – Acapra
