@@ -22,6 +22,7 @@
         }
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.0/build/qrcode.min.js"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -138,7 +139,7 @@
         <section class="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
             <div id="banner" class="text-center text-white max-w-4xl mx-auto">
                 <!-- Main Title -->
-                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-6 md:mb-8 tracking-wide leading-tight animate-pulse">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-6 md:mb-8 tracking-wide leading-tight">
                     <span class="">MUITO</span>
                     <span class="block text-5xl sm:text-6xl md:text-7xl lg:text-9xl">OBRIGADO!</span>
                 </h1>
@@ -150,19 +151,33 @@
 
                 <!-- PIX Info Card -->
                 <div class="bg-white bg-opacity-90 backdrop-blur-sm text-gray-800 rounded-2xl md:rounded-3xl p-6 md:p-8 lg:p-12 max-w-md md:max-w-lg mx-auto shadow-2xl transform hover:scale-105 transition-transform duration-300">
-                    <p class="text-lg md:text-xl lg:text-2xl mb-4 md:mb-6 font-medium text-gray-600">
-                        CNPJ
-                    </p>
-                    <div class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-purple-primary tracking-wider break-all">
-                        03.772.251.0001-82
+                    <div class="flex flex-col items-center">
+                        <p class="text-lg md:text-xl lg:text-2xl mb-4 md:mb-6 font-medium text-gray-600">
+                            CNPJ
+                        </p>
+                        <div class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-purple-primary tracking-wider whitespace-nowrap mb-6">
+                            03.772.251.0001-82
+                        </div>
+                        <div id="qr-code" class="w-48 h-48 bg-white p-4 rounded-lg shadow-inner mb-4">
+                            <!-- QR Code will be generated here -->
+                        </div>
+                        <p class="text-sm text-gray-600">
+                            Escaneie o QR Code com o aplicativo do seu banco
+                        </p>
                     </div>
                 </div>
 
                 <!-- Call to Action -->
                 <div class="mt-8 md:mt-12 space-y-4 md:space-y-0 md:space-x-6 flex flex-col md:flex-row justify-center items-center">
-                    <button id="copy-pix" class="bg-gradient-to-r from-purple-primary to-purple-secondary text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-xl w-full md:w-auto hover:shadow-2xl">
-                        Copiar PIX
-                    </button>
+                    <div class="relative">
+                        <button id="copy-pix" class="bg-gradient-to-r from-purple-primary to-purple-secondary text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-xl w-full md:w-auto hover:shadow-2xl flex items-center justify-center space-x-2">
+                            <span>Copiar PIX</span>
+                            <i class="fa-regular fa-copy"></i>
+                        </button>
+                        <div id="copy-feedback" class="absolute -top-12 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-4 py-2 rounded-lg opacity-0 transition-opacity duration-300 whitespace-nowrap">
+                            PIX copiado com sucesso! ✓
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -170,40 +185,108 @@
     </main>
 
     <script>
-        document.getElementById('copy-pix').addEventListener('click', function() {
-            const cnpj = '03.772.251.0001-82';
-            
-            if (navigator.clipboard) {
-                navigator.clipboard.writeText(cnpj).then(() => {
-                    this.textContent = 'PIX Copiado! ✓';
-                    this.classList.add('bg-green-500');
-                    this.classList.remove('bg-gradient-to-r', 'from-purple-primary', 'to-purple-secondary');
-                    
-                    setTimeout(() => {
-                        this.textContent = 'Copiar PIX';
-                        this.classList.remove('bg-green-500');
-                        this.classList.add('bg-gradient-to-r', 'from-purple-primary', 'to-purple-secondary');
-                    }, 2000);
-                });
-            } else {
-                const textArea = document.createElement('textarea');
-                textArea.value = cnpj;
-                document.body.appendChild(textArea);
-                textArea.select();
-                document.execCommand('copy');
-                document.body.removeChild(textArea);
-                
-                this.textContent = 'PIX Copiado! ✓';
-                this.classList.add('bg-green-500');
-                this.classList.remove('bg-gradient-to-r', 'from-purple-primary', 'to-purple-secondary');
+        document.addEventListener('DOMContentLoaded', function() {
+            const copyButton = document.getElementById('copy-pix');
+            const copyFeedback = document.getElementById('copy-feedback');
+            const pixChave = '03.772.251.0001-82';
+
+            function showCopyFeedback() {
+                copyFeedback.classList.remove('opacity-0');
+                copyButton.classList.add('bg-green-500');
+                copyButton.classList.remove('bg-gradient-to-r', 'from-purple-primary', 'to-purple-secondary');
+                copyButton.querySelector('span').textContent = 'PIX Copiado!';
                 
                 setTimeout(() => {
-                    this.textContent = 'Copiar PIX';
-                    this.classList.remove('bg-green-500');
-                    this.classList.add('bg-gradient-to-r', 'from-purple-primary', 'to-purple-secondary');
+                    copyFeedback.classList.add('opacity-0');
+                    copyButton.classList.remove('bg-green-500');
+                    copyButton.classList.add('bg-gradient-to-r', 'from-purple-primary', 'to-purple-secondary');
+                    copyButton.querySelector('span').textContent = 'Copiar PIX';
                 }, 2000);
             }
+
+            function copyToClipboard(text) {
+                if (navigator.clipboard && window.isSecureContext) {
+                    // For HTTPS or localhost
+                    return navigator.clipboard.writeText(text)
+                        .then(() => showCopyFeedback())
+                        .catch(() => fallbackCopyToClipboard(text));
+                } else {
+                    // Fallback for HTTP or unsupported browsers
+                    return fallbackCopyToClipboard(text);
+                }
+            }
+
+            function fallbackCopyToClipboard(text) {
+                const textArea = document.createElement('textarea');
+                textArea.value = text;
+                textArea.style.position = 'fixed';
+                textArea.style.opacity = '0';
+                document.body.appendChild(textArea);
+                
+                try {
+                    textArea.select();
+                    document.execCommand('copy');
+                    showCopyFeedback();
+                } catch (err) {
+                    console.error('Fallback: Não foi possível copiar o texto', err);
+                    alert('Não foi possível copiar o PIX automaticamente. Por favor, copie manualmente: ' + text);
+                } finally {
+                    document.body.removeChild(textArea);
+                }
+            }
+
+            copyButton.addEventListener('click', () => copyToClipboard(pixChave));
+
+            // Generate QR Code with better error handling
+            const qrCodeElement = document.getElementById('qr-code');
+            const pixData = {
+                keyType: "CNPJ",
+                key: "03772251000182",
+                name: "ACAPRA BRUSQUE",
+                city: "BRUSQUE",
+                value: "" // Optional: Add value if needed
+            };
+
+            function generateBRCode(data) {
+                const payload = [
+                    "00020126",
+                    `26${(data.key.length + 14).toString().padStart(2, '0')}0014BR.GOV.BCB.PIX01${data.key.length}${data.key}`,
+                    "52040000",
+                    "5303986",
+                    "5802BR",
+                    `5913${data.name}`,
+                    `6006${data.city}`,
+                    "6304"
+                ].join('');
+
+                return payload;
+            }
+
+            try {
+                const brCode = generateBRCode(pixData);
+                QRCode.toCanvas(qrCodeElement, brCode, {
+                    width: 192,
+                    height: 192,
+                    margin: 0,
+                    color: {
+                        dark: '#8B5FBF',
+                        light: '#FFFFFF'
+                    }
+                }).then(canvas => {
+                    // Clear previous content and append the new canvas
+                    qrCodeElement.innerHTML = '';
+                    qrCodeElement.appendChild(canvas);
+                }).catch(error => {
+                    console.error('Erro ao gerar QR Code:', error);
+                    qrCodeElement.innerHTML = '<p class="text-red-600">Erro ao gerar QR Code. Por favor, use o código PIX acima.</p>';
+                });
+            } catch (error) {
+                console.error('Erro ao gerar BR Code:', error);
+                qrCodeElement.innerHTML = '<p class="text-red-600">Erro ao gerar QR Code. Por favor, use o código PIX acima.</p>';
+            }
         });
+    </script>
+    <script>
 
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -218,7 +301,46 @@
         });
     </script>
 
-    <script src="../scripts/menu.js"></script>
+    <script>
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+
+            mobileMenuToggle.addEventListener('click', function() {
+                mobileMenu.classList.toggle('menu-open');
+                // Toggle aria-expanded for accessibility
+                const isExpanded = mobileMenu.classList.contains('menu-open');
+                mobileMenuToggle.setAttribute('aria-expanded', isExpanded);
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!mobileMenu.contains(event.target) && !mobileMenuToggle.contains(event.target)) {
+                    mobileMenu.classList.remove('menu-open');
+                    mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer class="bg-white/80 backdrop-blur-md shadow-xl mt-20 py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-4 mb-4 md:mb-0">
+                    <img src="../assets/icons/logo.png" alt="Logo ACAPRA" class="w-12 h-12 object-contain" />
+                    <div class="text-[#555484] font-bold">
+                        <h2 class="text-sm leading-tight">ACAPRA</h2>
+                        <h2 class="text-sm leading-tight">Brusque</h2>
+                    </div>
+                </div>
+                <div class="text-[#555484] text-sm mt-4 md:mt-0">
+                    © 2025 ACAPRA Brusque. Todos os direitos reservados.
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
